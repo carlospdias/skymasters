@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class privateController {
+public class PrivateController {
 
     @GetMapping("/messages")
     public String privateMessages(Model model, @AuthenticationPrincipal OAuth2User principal) {
