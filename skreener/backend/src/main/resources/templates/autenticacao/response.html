@@ -9,17 +9,16 @@
 <h2>Autenticação OAuth2(Google) Com Spring Security</h2>
 
 <div>
-    <h2>Acesso Público</h2>
+    <h2>Acesso Privado</h2>
     <ul>
-        <li><a th:href="@{/public/messages}">Acesso Público.</a></li>
+        <li><a th:href="@{/messages}">Autenticação Usando O Google.</a></li>
     </ul>
 
     <hr />
+    <a th:href="@{/}">Voltar para Página Principal</a>
+    <h2>Resposta: </h2>
 
-    <h2>Acesso Privado</h2>
-    <ul>
-        <li><a th:href="@{/messages}">Recurso Onde a Autenticação do Google é Necessária.</a></li>
-    </ul>
+    <pre><span th:text="${body}"></span></pre>
 
 </div>
 </body>

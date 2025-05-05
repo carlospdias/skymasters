@@ -14,7 +14,9 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeHttpRequests(auth->auth.anyRequest().authenticated())
+                .authorizeHttpRequests(auth->auth
+                        .requestMatchers("/","/public").permitAll()
+                        .anyRequest().authenticated())
                 .oauth2Login(Customizer.withDefaults());
 
         return http.build();

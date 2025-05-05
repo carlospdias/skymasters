@@ -7,10 +7,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class IndexController {
+public class privateController {
 
-    @GetMapping("/")
-    public String index() {
-        return "autenticacao/index";
+    @GetMapping("/messages")
+    public String privateMessages(Model model, @AuthenticationPrincipal OAuth2User principal) {
+        model.addAttribute("body", principal.getAttribute("name"));
+
+        return "autenticacao/response";
     }
 }
