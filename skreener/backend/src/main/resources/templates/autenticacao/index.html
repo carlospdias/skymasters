@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Security : OAuth2 Login Response</title>
+</head>
+<body>
+<h2>Autenticação OAuth2(Google) Com Spring Security</h2>
+
+<div>
+    <h2>Acesso Público</h2>
+    <ul>
+        <li><a th:href="@{/public/messages}">Acesso Público.</a></li>
+    </ul>
+
+    <hr />
+
+    <h2>Acesso Privado</h2>
+    <ul>
+        <li><a th:href="@{/messages}">Recurso Onde a Autenticação do Google é Necessária.</a></li>
+    </ul>
+
+</div>
+</body>
+</html>
